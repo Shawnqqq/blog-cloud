@@ -1,0 +1,23 @@
+<view class="topic-list">
+  <navigator class="topic-item"
+    wx:for="{{indexData}}"
+    wx:key="{{item._id}}"
+    url="/pages/single/single?id={{item._id}}">
+    <image class="topic-avatar" src="{{item.userInfo.avatarUrl}}"></image>
+    <view class="topic-body">
+      <view class="topic-name">{{item.userInfo.nickName}}</view>
+      <view class="topic-content">
+        <text class="topic-text">{{item.content}}</text>
+      </view>
+      <image class="topic-resourcesr"
+        wx:for="{{item.imageUrl}}"
+        wx:for-item="url"
+        wx:for-index="idx"
+        wx:key="{{idx}}"
+        data-url="{{url}}"
+        catchtap="handleViewImage"
+        src="{{url}}"></image>
+      <view class="topic-time">{{item.date}}</view>
+    </view>
+  </navigator>
+</view>

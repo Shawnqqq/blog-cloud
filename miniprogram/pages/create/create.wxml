@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header">
+    <view class="cancel" bindtap="handleCancel">取消</view>
+    <view class="push" bindtap="hanleSubmit">发布</view>
+  </view>
+  <textarea class="text" 
+    placeholder="这一刻的发现..." 
+    auto-height
+    bindinput="handleChange"></textarea>
+  <view class="resource">
+    <image class="resource-image"
+      wx:for="{{imageUrl}}"
+      wx:key="{{index}}"
+      src="{{item}}"
+    ></image>
+    <view class="resource-add" bindtap="handleAdd"></view>
+  </view>
+</view>

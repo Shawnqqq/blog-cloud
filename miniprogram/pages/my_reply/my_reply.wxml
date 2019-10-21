@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="reply-container">
+    <navigator class="reply-list"
+      wx:for="{{reply}}"
+      wx:key="{{index}}"
+      url="/pages/single/single?id={{item.topic_id}}">
+      <image class="reply-avatar" src="{{item.userInfo.avatarUrl}}"></image>
+      <view class="reply-body">
+        <view class="reply-name">{{item.userInfo.nickName}}</view>
+        <view class="reply-content">
+          <text class="reply-text">{{item.content}}</text>
+        </view>
+        <view class="reply-time">{{item.date}}</view>
+      </view>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh":true,
+  "usingComponents":{
+    "topics":"/components/topic/topic"
+  }
+}

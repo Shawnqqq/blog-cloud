@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="topic-container">
+    <view class="topic-header">
+      <image class="topic-avatar" src="{{topic.userInfo.avatarUrl}}"></image>
+      <view class="topic-user">
+        <view class="topic-name">{{topic.userInfo.nickName}}</view>
+        <view class="topic-time">{{topic.date}}</view>
+      </view>
+    </view>
+    <view class="topic-content">
+      <text class="topic-text">{{topic.content}}</text>
+    </view>
+    <image class="topic-resources"
+    wx:for="{{topic.imageUrl}}"
+    wx:key="{{index}}"
+    src="{{item}}"
+    ></image>
+  </view>
+  <view class="reply-container">
+    <view class="reply-list"
+      wx:for="{{reply}}"
+      wx:key="{{index}}">
+      <image class="reply-avatar" src="{{item.userInfo.avatarUrl}}"></image>
+      <view class="reply-body">
+        <view class="reply-name">{{item.userInfo.nickName}}</view>
+        <view class="reply-content">
+          <text class="reply-text">{{item.content}}</text>
+        </view>
+        <view class="reply-time">{{item.date}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="input-container" wx:if="{{userInfo.nickName}}">
+    <input class="reply-input" bindconfirm="handleReply" value="{{content}}" />
+  </view>
+  <button class="login-container" 
+    hover-class="login-hover"
+    open-type="getUserInfo" 
+    bindgetuserinfo="getUserInfo"
+    wx:else>登录后评论</button>
+</view>

@@ -1,0 +1,37 @@
+.reply-container{
+  margin-bottom: 80rpx;
+}
+.reply-list{
+  padding: 20rpx;
+  display: flex;
+  background-color: rgba(153, 153, 153, 0.1);
+  border-bottom: 1rpx solid rgba(153, 153, 153, 0.5);
+}
+.reply-avatar{
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+}
+.reply-body{
+  width: 80%;
+}
+.reply-name{
+  font-size: 24rpx;
+  color: #4682B4;
+  line-height: 2;
+}
+.reply-content{
+  width: 100%;
+}
+.reply-text{
+  font-size: 22rpx;
+  color: #555;
+  line-height: 1;
+  margin-bottom: 20rpx;
+}
+.reply-time{
+  margin-top: 30rpx;
+  font-size: 18rpx;
+  color: #999;
+}

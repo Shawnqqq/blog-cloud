@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的博客",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "topics": "/components/topic/topic"
+  }
+}

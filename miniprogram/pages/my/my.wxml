@@ -1,0 +1,30 @@
+<view class="container">
+  <block wx:if="{{login}}">
+    <view class="header">
+      <image class="header-avatar" src="{{avatar}}"></image>
+      <text class="header-name">{{name}}</text>
+    </view>
+    <view class="my-content">
+      <view class="my-item" bindtap="handleCreate">
+        <image class="item-icon" src="../../image/push.png"></image>
+        <text class="item-text">发布博客</text>
+        <text class="item-arrow">></text>
+      </view>
+      <view class="my-item" bindtap="handleMy">
+        <image class="item-icon" src="../../image/blog.png"></image>
+        <text class="item-text">我的博客</text>
+        <text class="item-arrow">></text>
+      </view>
+      <view class="my-item" bindtap="handleReply">
+        <image class="item-icon" src="../../image/reply.png"></image>
+        <text class="item-text">我的回复</text>
+        <text class="item-arrow">></text>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <button class="empower" 
+    open-type="getUserInfo" 
+    bindgetuserinfo="onGetUserInfo">授权登录使用</button>
+  </block>
+</view>
